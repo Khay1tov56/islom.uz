@@ -10,12 +10,12 @@ body {
 
 .chiziq {
     width: 100%;
-   max-width: 1200px;
-   height: 2px;
-   margin: 0 auto;
-   margin-bottom: 20px;
-   background-color: aqua;
-   
+    max-width: 1200px;
+    height: 2px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: aqua;
+
 }
 
 .forms {
@@ -40,6 +40,7 @@ body {
 .kun {
     margin: 0 30px;
 }
+
 .mintaqa {
     margin: 20px 0;
     display: flex;
@@ -51,23 +52,20 @@ body {
 .list {
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
     padding-left: 0;
-    list-style:none;
+    list-style: none;
 }
 
 .item {
     margin: 10px;
     padding: 10px;
     width: 100%;
-    /* flex-shrink: 1; */
     background: rgba(255, 255, 255, 0.2);
-border: 1px solid #000000;
-box-shadow: 0px 10px 100px 10px rgba(255, 255, 255, 0.2);
-/* filter: blur(2px); */
-border-radius: 25px;
-list-style-type: none;
-text-align: center;
+    border: 1px solid #000000;
+    box-shadow: 0px 10px 100px 10px rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    list-style-type: none;
+    text-align: center;
 }
 
 .wrapitem {
@@ -88,17 +86,42 @@ text-align: center;
 
 .tong {
     font-weight: 700;
-font-size: 32px;
-line-height: 46px;
-color: #FFC700;
+    font-size: 32px;
+    line-height: 46px;
+    color: #FFC700;
 
 }
 
 .times {
     font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 69px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 69px;
 
-color: #FFFFFF;
+    color: #FFFFFF;
 }
+
+.scale {
+    scale: 1.1;
+}
+
+/* if (arr.tong_saharlik > arr.quyosh) {
+    tongitem.classList.add("scale")
+} else if (arr.quyosh > arr.peshin) {
+    quyoshitem.classList.add("scale")
+} else if (arr.peshin > arr.asr) {
+    peshinitem.classList.add("scale")
+} else if (arr.asr > arr.shom_iftor) {
+    asritem.classList.add("scale")
+} else if (arr.shom_iftor > arr.hufton) {
+    shomitem.classList.add("scale")
+}else if (arr.hufton > arr.tong_saharlik) {
+    xuftonitem.classList.add("scale")
+}
+
+newFragmentClone.querySelector(".tongitem")
+        newFragmentClone.querySelector(".quyoshitem")
+        newFragmentClone.querySelector(".peshinitem")
+        newFragmentClone.querySelector(".asritem")
+        newFragmentClone.querySelector(".shomitem")
+        newFragmentClone.querySelector(".xuftonitem") */

@@ -7,7 +7,7 @@ let elList = document.querySelector(".list");
 let elTemplate = document.querySelector(".template").content;
 let newFragment = document.createDocumentFragment();
 
-elForm.addEventListener("click", (evt) => {
+elForm.addEventListener("onchange", (evt) => {
     evt.preventDefault();
     let elSelectValue = elSelect.value;
     elCity.textContent = elSelectValue
@@ -24,14 +24,14 @@ async function fetchFunction(absd ="Toshkent") {
         let arr = data.times;
         elDay.textContent = data.date
         let newFragmentClone = elTemplate.cloneNode(true);
+        newFragmentClone.querySelector(".item").classList.add("scale")
         newFragmentClone.querySelector(".times").textContent = arr.tong_saharlik
         newFragmentClone.querySelector(".quyosh").textContent = arr.quyosh
         newFragmentClone.querySelector(".peshin").textContent = arr.peshin
         newFragmentClone.querySelector(".asr").textContent = arr.asr
         newFragmentClone.querySelector(".shom").textContent = arr.shom_iftor
         newFragmentClone.querySelector(".xufton").textContent = arr.hufton
-        // console.log(data.times.quyosh);
-        console.log(arr.quyosh);
+       
         newFragment.appendChild(newFragmentClone)
         elList.appendChild(newFragment)
     } catch (error) {
@@ -40,6 +40,50 @@ async function fetchFunction(absd ="Toshkent") {
 }
 
 fetchFunction()
+
+
+async function fetchFunctionWeek(absde ="Toshkent") {
+    elList.innerHTML = "";
+    try {
+        let res = await fetch(`ttps://islomapi.uz/api/present/week?region=${absde}`)
+        let data = await res.json();
+        console.log(data);
+        let arr = data.times;
+        elDay.textContent = data.date
+        let newFragmentClone = elTemplate.cloneNode(true);
+        newFragmentClone.querySelector(".item")
+        newFragmentClone.querySelector(".times").textContent = arr.tong_saharlik
+        newFragmentClone.querySelector(".quyosh").textContent = arr.quyosh
+        newFragmentClone.querySelector(".peshin").textContent = arr.peshin
+        newFragmentClone.querySelector(".asr").textContent = arr.asr
+        newFragmentClone.querySelector(".shom").textContent = arr.shom_iftor
+        newFragmentClone.querySelector(".xufton").textContent = arr.hufton
+       
+        newFragment.appendChild(newFragmentClone)
+        elList.appendChild(newFragment)
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+fetchFunctionWeek()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
