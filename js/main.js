@@ -7,7 +7,7 @@ let elList = document.querySelector(".list");
 let elTemplate = document.querySelector(".template").content;
 let newFragment = document.createDocumentFragment();
 
-elForm.addEventListener("onchange", (evt) => {
+elForm.addEventListener("change", (evt) => {
     evt.preventDefault();
     let elSelectValue = elSelect.value;
     elCity.textContent = elSelectValue
@@ -24,7 +24,6 @@ async function fetchFunction(absd ="Toshkent") {
         let arr = data.times;
         elDay.textContent = data.date
         let newFragmentClone = elTemplate.cloneNode(true);
-        newFragmentClone.querySelector(".item").classList.add("scale")
         newFragmentClone.querySelector(".times").textContent = arr.tong_saharlik
         newFragmentClone.querySelector(".quyosh").textContent = arr.quyosh
         newFragmentClone.querySelector(".peshin").textContent = arr.peshin
