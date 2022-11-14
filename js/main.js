@@ -7,7 +7,7 @@ let elList = document.querySelector(".list");
 let elTemplate = document.querySelector(".template").content;
 let newFragment = document.createDocumentFragment();
 
-elForm.addEventListener("change", (evt) => {
+elForm.addEventListener("click", (evt) => {
     evt.preventDefault();
     let elSelectValue = elSelect.value;
     elCity.textContent = elSelectValue
